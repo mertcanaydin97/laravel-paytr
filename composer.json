@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "mertcanaydin97\\LaravelPaytr\\PackageServiceProvider"
+                "mertcanaydin97\\LaravelPaytr\\Providers\\PaytrServiceProvider"
             ]
         }
     }
