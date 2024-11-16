@@ -29,7 +29,7 @@
     <input type="hidden" name="card_type" value="{{ $data->card_type }}">
     <input type="submit" value="Submit">
   </form>
- <script src="{{ asset('laravelpaytr/js/card.js') }}"></script>
+ <script src="{{ asset('vendor/laravel-paytr/js/card.js') }}"></script>
 
  <script>
     var card = new Card({
