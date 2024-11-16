@@ -1,0 +1,26 @@
+{
+    "name": "mertcanaydin97/laravel-paytr",
+    "description": "Paytr payment getaway for laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mertcan Aydın",
+            "email": "web@mertcanaydin.com.tr"
+        }
+    ],
+    "keywords": ["laravel-paytr", "paytr", "php"],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "mertcanaydin97\\LaravelPaytr\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "mertcanaydin97\\LaravelPaytr\\PackageServiceProvider"
+            ]
+        }
+    }
+}
