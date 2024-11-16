@@ -16,6 +16,7 @@ class PackageServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/laravel-paytr.php' => config_path('laravel-paytr.php'),
             __DIR__.'/..//views' => resource_path('views/vendor/laravel-paytr'),
+            __DIR__.'/../public/assets' => public_path('laravelpaytr'),
 
         ]);
 
