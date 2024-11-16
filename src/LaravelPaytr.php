@@ -106,6 +106,6 @@ class LaravelPaytr
     public function paymentForm()
     {
         $data = $this->cardformdata;
-        return view('cardform', compact('data'));
+        return view('laravelpaytr::cardform', compact('data'));
     }
 }
