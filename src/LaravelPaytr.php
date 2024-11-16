@@ -23,7 +23,7 @@ class LaravelPaytr
     private $config;
 
     private $cardformdata;
-    private function __construct()
+    public function __invoke()
     {
         $this->merchant_id = ENV('PYATR_MERCHANT_ID', 'MAGAZA_NO');
         $this->merchant_key = ENV('PYATR_MERCHANT_KEY', 'XXXXXXXXXXX');
@@ -106,6 +106,6 @@ class LaravelPaytr
     public function paymentForm()
     {
         $data = $this->cardformdata;
-        return view('laravel-paytr', compact('data'));
+        return view('cardform', compact('data'));
     }
 }
