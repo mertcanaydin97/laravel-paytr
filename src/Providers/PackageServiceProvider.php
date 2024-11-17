@@ -3,6 +3,9 @@
 namespace Mertcanaydin97\LaravelPaytr\Providers;
 use Mertcanaydin97\LaravelPaytr\LaravelPaytr;
 use Illuminate\Support\ServiceProvider;
+use GuzzleHttp\Client;
+use Mertcanaydin97\LaravelPaytr\Exceptions\InvalidConfig;
+
 class PackageServiceProvider extends ServiceProvider
 {
     public function boot()
@@ -34,5 +37,17 @@ class PackageServiceProvider extends ServiceProvider
 
     public function register()
     {
+        $this->app->singleton(Paytr::class, function ($app) {
+            $config = config('paytr');
+            if (is_null($config)) {
+                throw InvalidConfig::configNotFound();
+            }
+
+            $client = new Client([
+                'base_uri' => $config['options']['base_uri'],
+                'timeout' => $config['options']['timeout'],
+            ]);
+            return new LaravelPaytr($client, $config['credentials'], $config['options']);
+        });
     }
 }
