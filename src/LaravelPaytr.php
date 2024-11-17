@@ -4,6 +4,7 @@ namespace Mertcanaydin97\LaravelPaytr;
 
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
+use Mertcanaydin97\LaravelPaytr\Helpers\Payment;
 
 class LaravelPaytr
 {
@@ -17,6 +18,12 @@ class LaravelPaytr
         $this->client = $client;
         $this->credentials = $credentials;
         $this->options = $options;
+    }
+
+
+    public function payment()
+    {
+        return new Payment();
     }
     private function dataStd($data)
     {
