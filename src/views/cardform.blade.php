@@ -3,10 +3,10 @@
 <link rel="{{ asset('vendor/laravel-paytr/css/card.css') }}">
 <div class="card-wrapper"></div>
 <form action="{{ $data->posturl }}" method="post" id="paytrpayform">
-    Kart Sahibi Adı: <input type="text" name="cc_owner" value="TEST KARTI"><br>
+    Kart Sahibi Adı: <input type="text" name="cc_owner" id="name" value="TEST KARTI"><br>
     Kart Numarası: <input type="text" name="card_number" id="number" value="9792030394440796"><br>
-    Kart Son Kullanma Tarihi: <input type="text" name="expiry_month" id="expiryInput" value="12" ><br>
-    Kart Güvenlik Kodu: <input type="text" name="cvv" id="cvcInput" value="000"><br>
+    Kart Son Kullanma Tarihi: <input type="text" name="expiry_month" id="expiry" value="12" ><br>
+    Kart Güvenlik Kodu: <input type="text" name="cvv" id="vcv" value="000"><br>
     <input type="hidden" name="merchant_id" value="{{ $data->merchant_id }}">
     <input type="hidden" name="user_ip" value="{{ $data->user_ip }}">
     <input type="hidden" name="merchant_oid" value="{{ $data->merchant_oid }}">

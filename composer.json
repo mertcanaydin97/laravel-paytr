@@ -10,7 +10,12 @@
         }
     ],
     "keywords": ["laravel-paytr", "paytr", "php"],
-    "require": {},
+    "require": {
+        "php": "^8.0|^8.1",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/collections": "^8|^9|^10",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
     "autoload": {
         "psr-4": {
             "mertcanaydin97\\LaravelPaytr\\": "src"
@@ -20,7 +25,10 @@
         "laravel": {
             "providers": [
                 "mertcanaydin97\\LaravelPaytr\\Providers\\PackageServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "LaravelPaytr": "mertcanaydin97\\LaravelPaytr\\LaravelPaytrFacade"
+            }
         }
     }
 }
