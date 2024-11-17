@@ -27,11 +27,9 @@ class LaravelPaytr
         }
         return $std;
     }
-    public function paymentForm($carddata)
+    public function paymentForm($payment)
     {
-        array_merge($carddata, $this->cardformdata);
-        $data = $this->dataStd($carddata);
-        return $data;
+        return $payment;
         return view('laravelpaytr::cardform', compact('data'));
     }
 }
